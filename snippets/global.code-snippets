@@ -1,0 +1,86 @@
+{
+  // Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "php1": {
+    "scope": "php, html",
+    "prefix": "?",
+    "body": ["<?php", "${1:}"],
+    "description": "PHPの開始タグのみ宣言"
+  },
+  "php2": {
+    "scope": "php, html",
+    "prefix": "??",
+    "body": ["<?php", "${1:}", "?>"],
+    "description": "PHPの終了タグ付き宣言"
+  },
+  "php3": {
+    "scope": "php, html",
+    "prefix": "?_",
+    "body": ["<?php declare(strict_types=1);", "${1:}"],
+    "description": "外部ファイルの型エラー出力:開始タグのみ"
+  },
+  "php4": {
+    "scope": "php, html",
+    "prefix": "??_",
+    "body": ["<?php declare(strict_types=1);", "${1:}", "?>"],
+    "description": "外部ファイルの型エラー出力:閉じ括弧含む"
+  },
+  "=": {
+    "scope": "php, html",
+    "prefix": "=",
+    "body": "<?=${1:$}?>",
+    "description": "PHPの出力宣言"
+  },
+  "=h": {
+    "scope": "php, html",
+    "prefix": "=h",
+    "body": "<?=h($${1:})?>",
+    "description": "PHPの出力h関数"
+  },
+  "REQUEST_METHOD": {
+    "scope": "php, html",
+    "prefix": "req",
+    "body": [
+      "<?php if ($$_SERVER['REQUEST_METHOD'] === 'POST'): ?>",
+      "\t${1:}",
+      "<?php endif; ?>"
+    ],
+    "description": "POST送信後の結果表示"
+  },
+  "valh": {
+    "scope": "php, html",
+    "prefix": "valh",
+    "body": "value=\"<?=h($${1:})?>\"",
+    "description": "val属性内にh関数"
+  },
+  "errorMessage": {
+    "scope": "php, html",
+    "prefix": "err",
+    "body": [
+      "<?php if (isset($${1:}Error)):?>",
+      "\t<${2:p} class=\"error\"><?=$${1:}Error?></${2:p}>",
+      "<?php endif;?>"
+    ],
+    "description": "フォームのエラー出力"
+  },
+  "comment": {
+    "scope": "php, html",
+    "prefix": "/*",
+    "body": "<?php /* ${1:} */ ?>",
+    "description": "HTMLとPHPを両方コメント"
+  }
+}

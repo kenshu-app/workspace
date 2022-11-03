@@ -1,0 +1,167 @@
+{
+  // Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "html5": {
+    "prefix": "!+",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"ja\">",
+      "<head>",
+      "\t<meta charset=\"UTF-8\">",
+      "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "\t<title>${1:Title}</title>",
+      "\t<meta name=\"description\" content=\"${1:Title}\">",
+      "\t<link rel=\"icon\" href=\"images/favicon.png\" type=\"image/png\">",
+      "\t<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">",
+      "\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css\">",
+      "\t<link rel=\"stylesheet\" href=\"css/style.css\">",
+      "</head>",
+      "<body>",
+      "\t<h1>${1:Title}</h1>",
+      "\t${2:}",
+      "\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js\"></script>",
+      "</body>",
+      "</html>"
+    ],
+    "description": "FontAwesome+Bootstrap5"
+  },
+  "vp": {
+    "prefix": "vp",
+    "body": "<meta name=\"viewport\" content=\"width=${1:device-width}${2: , initial-scale=1.0}\">",
+    "description": "ビューポート"
+  },
+  "description": {
+    "prefix": "desc",
+    "body": "<meta name=\"description\" content=\"${1:}\">",
+    "description": "詳細説明"
+  },
+  "target": {
+    "prefix": "tar",
+    "body": "target=\"_blank\"",
+    "description": "ターゲット属性"
+  },
+  "favicon": {
+    "prefix": "favicon",
+    "body": "<link rel=\"icon\" type=\"image/png\" href=\"images/${1:favicon.png}\">",
+    "description": "ファビコン"
+  },
+  "ogp": {
+    "prefix": "ogp",
+    "body": [
+      "<meta property=\"fb:app_id\" content=\"${1:App-ID(15文字の半角数字)}\" >",
+      "<meta property=\"og:title\" content=\"${2:(PageTitle | )SiteTitle}\" >",
+      "<meta property=\"og:type\" content=\"${3:website}\" >",
+      "<meta property=\"og:url\" content=\"${4:http://sample.com/aboutus}\" >",
+      "<meta property=\"og:image\" content=\"${5:http://test.com/img/ogp.jpg}\" >",
+      "<meta property=\"og:site_name\" content=\"${6:SiteTitle}\" >",
+      "<meta property=\"og:description\" content=\"${7:ページ説明文}\" >"
+    ]
+  },
+  "ResetCSS": {
+    "prefix": "reset",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap-reboot.min.css\">"
+    ],
+    "description": "Rebootの圧縮CDN"
+  },
+  "jQueryCDN": {
+    "prefix": "jq",
+    "body": [
+      "<script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\"></script>"
+    ],
+    "description": "jQueryの軽量圧縮CDN"
+  },
+  "falink": {
+    "prefix": "falink",
+    "body": [
+      "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">"
+    ],
+    "description": "FontAwesomeリンク"
+  },
+  "fa": {
+    "prefix": "fa",
+    "body": ["<i class=\"fa fa-${1:}\"></i> "],
+    "description": "FontAwesome個別展開"
+  },
+  "fa+": {
+    "prefix": "fa+",
+    "body": [
+      "<span class=\"fa-stack fa-lg\">",
+      "\t<i class=\"fa fa-circle fa-stack-2x\"></i>",
+      "\t<i class=\"fa fa-${1:} fa-stack-1x fa-inverse\"></i>",
+      "</span>"
+    ],
+    "description": "FontAwesome重複指定"
+  },
+  "cat": {
+    "prefix": "cat",
+    "body": "<img src=\"https://placekitten.com/${1:400}/${2:400}\" alt=\"cat\">",
+    "description": "猫のダミー画像"
+  },
+  "picsumPhoto": {
+    "prefix": "img+",
+    "body": "<img src=\"https://picsum.photos/200/300\" alt=\"lorempicsum\">",
+    "description": "ダミー画像"
+  },
+  ".container": {
+    "prefix": ".c",
+    "body": ["<div class=\"container\">", "\t${1:}", "</div>"],
+    "description": "コンテナ"
+  },
+  "form": {
+    "prefix": "form",
+    "body": [
+      "<form action=\"${1:}\" method=\"${2:post}\" novalidate>",
+      "\t${3:}",
+      "\t<p><input type=\"submit\" value=\"送信\"></p>",
+      "</form>"
+    ],
+    "description": "フォーム(送信ボタン付)"
+  },
+  "bs-col": {
+    "prefix": "col",
+    "body": [
+      "<div class=\"row\">",
+      "\t<div class=\"col-md-${1:4} col-xs-12\">",
+      "\t\t${2:}",
+      "\t</div>",
+      "</div>"
+    ]
+  },
+  "js": {
+    "prefix": "js",
+    "body": "<script src=\"${1:}\"></script>",
+    "description": "JS宣言"
+  },
+  "sc": {
+    "prefix": "sc",
+    "body": ["<script>", "\t${1:}", "</script>"],
+    "description": "scriptのみ"
+  },
+  "jQueryV2": {
+    "prefix": "jq2",
+    "body": "<script src=\"https://code.jquery.com/jquery-2.2.4.min.js\" integrity=\"sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=\" crossorigin=\"anonymous\"></script>",
+    "description": "jQueryCDN-2.2.4"
+  },
+  "jQueryV3": {
+    "prefix": "jq3",
+    "body": "<script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=\" crossorigin=\"anonymous\"></script>",
+    "description": "jQueryCDN-3.5.1"
+  },
+  "vue": {
+    "prefix": "vue",
+    "body": "<script src=\"https://unpkg.com/vue@next\"></script>",
+    "description": "vue new version"
+  }
+}

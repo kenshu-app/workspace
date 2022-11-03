@@ -1,0 +1,54 @@
+{
+    // Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+    // same ids are connected.
+    // Example:
+    // "Print to console": {
+    // 	"prefix": "log",
+    // 	"body": [
+    // 		"console.log('$1');",
+    // 		"$2"
+    // 	],
+    // 	"description": "Log output to console"
+    // }
+    "let": {
+        "prefix": "l",
+        "body": "let ${1:} = '${2:}'",
+        "description": "変数定義"
+    },
+    "const": {
+        "prefix": "c",
+        "body": "const ${1:} = '${2:}'",
+        "description": "定数定義"
+    },
+    "con": {
+        "prefix": "con",
+        "body": "console.log(${1:''})${2:}",
+        "description": "デバッグ出力"
+    },
+    "ready": {
+        "prefix": "ready",
+        "body": "$(function(){\n${1:}\n})",
+        "description": "即時関数"
+    },
+    "jQ-Obj": {
+        "prefix": "jq",
+        "body": "$('${1:}').${2:}()",
+        "description": "jQueryObject"
+    },
+    "jQ-click": {
+        "prefix": "jqc",
+        "body": [
+            "$('${1:}').click(function(){",
+            "\t$('${2:}').${3:}",
+            "})",
+        ],
+        "description": "jQueryClickEvent"
+    },
+    "function": {
+        "prefix": "fn",
+        "body": "function(){\n${1:}\n}",
+        "description": "関数定義"
+    },
+}

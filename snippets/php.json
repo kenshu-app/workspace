@@ -1,0 +1,159 @@
+{
+  // Place your snippets for php here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "pre+dump": {
+    "prefix": "dump",
+    "body": ["echo '<pre>';", "var_dump(${1:});", "echo '</pre>';"],
+    "description": "コード出力内var_dump"
+  },
+  "empty": {
+    "prefix": "empty",
+    "body": [
+      "$${1:■} = '';",
+      "if (!empty($$_POST)) {",
+      "\t$■ = $$_POST['■'];",
+      "}"
+    ],
+    "description": "空値確認フォーム値参照"
+  },
+  "hsc": {
+    "prefix": "hsc",
+    "body": "htmlspecialchars(${1:$})",
+    "description": "htmlspecialchars1行出力"
+  },
+  "htmlspecialchars": {
+    "prefix": "hfx",
+    "body": [
+      "/**",
+      " * XSS対策の参照名省略",
+      " *",
+      " * @param string $string",
+      " * @return string",
+      " *",
+      " */",
+      "function h(?string $$string): string",
+      "{",
+      "    return htmlspecialchars($$string, ENT_QUOTES, 'UTF-8');",
+      "}${1:}"
+    ],
+    "description": "h関数"
+  },
+  "pr": {
+    "prefix": "pr",
+    "body": ["echo '<pre>';", "print_r(${1:});", "echo '</pre>';"],
+    "description": "シンプルデバッグ出力"
+  },
+  "flagTrue": {
+    "prefix": "ist",
+    "body": ["$$isValidated = true;"],
+    "description": "フラグ宣言"
+  },
+  "flagFalse": {
+    "prefix": "isf",
+    "body": ["$$isValidated = false;"],
+    "description": "フラグを下ろす"
+  },
+  "flagValid": {
+    "prefix": "ift",
+    "body": ["if ($$isValidated === true) {",
+      "\t${1:}",
+      "}"
+    ],
+    "description": "フラグの判定"
+  },
+  "nullValid": {
+    "prefix": "ifv",
+    "body": ["if ($${1:} === '' || mb_ereg_match('/^(\\s|　)+$/', $${1:})) {",
+      "\t$${1:}Error = '${2:}';",
+      "\t$$isValidated = false;",
+      "}"
+    ],
+    "description": "空値の判定"
+  },
+  "post": {
+    "prefix": "post",
+    "body": "$${1:■} = $$_POST['${2:■}'];",
+    "description": "フォーム値個別参照"
+  },
+  "if": {
+    "prefix": "if",
+    "body": ["if ($${1:} == ${2:}) {", "  ${2:}", "}"],
+    "description": "条件分岐"
+  },
+  "for": {
+    "prefix": "for",
+    "body": ["for ($$i = 0; $$i < ${1:}; $$i++) {", "  ${2:}", "}"],
+    "description": "繰り返し"
+  },
+  "function": {
+    "prefix": "fx",
+    "body": ["function ${1:}(${2:})", "{", "  ${2:}", "}"],
+    "description": "関数"
+  },
+  "require_once": {
+    "prefix": "ro",
+    "body": "require_once dirname(__FILE__) . '/${1:}.php';",
+    "description": "外部ファイル読み込み"
+  },
+  "logout": {
+    "prefix": "lo",
+    "body": [
+        "session_start();",
+        "",
+        "$$_SESSION = array();",
+        "$$params = session_get_cookie_params();",
+        "setcookie(session_name(), '', time() - 36000,",
+        "\t$$params['path'], $$params['domain'],",
+        "\t$$params['secure'], $$params['httponly']);",
+        "session_destroy();${1:}"
+    ],
+    "description": "ログアウト時のセッション破棄"
+  },
+  "redirect": {
+    "prefix": "hl",
+    "body": ["header('Location: ${1:}.php');", "exit;"],
+    "description": "リダイレクト処理"
+  },
+  "PDOException": {
+    "prefix": "try",
+    "body": [
+      "try {",
+      "    ${1:}",
+      "} catch (PDOException $$e) {",
+      "    header('Content-Type: text/plain; charset=UTF-8', true, 500);",
+      "    exit($$e -> getMessage());",
+      "}"
+    ],
+    "description": "例外処理"
+  },
+  "DateTimeFormat": {
+    "prefix": "dtf",
+    "body": "(new DateTime(${1:}))->format('${2:Y-m-d}');",
+    "description": "DateTimeの表示整形をワンラインで実行"
+  },
+  "RouteGet": {
+    "prefix": "rget",
+    "body": "Route::get('/', [${1:}Controller::class, '${2:index}']);",
+    "description": "LaravelのREST APIの基本展開"
+  },
+  "foreach": {
+    "prefix": "@for",
+    "body": [
+      "@foreach (${1:$arr} as ${2:$val})",
+      "\t${3:}",
+      "@endforeach"
+    ],
+    "description": "Laravelbladeの繰り返しディレクティブ"
+  }
+}
