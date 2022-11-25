@@ -1,17 +1,4 @@
 {
-  // Place your snippets for php here. Each snippet is defined under a snippet name and has a prefix, body and
-  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
-  // same ids are connected.
-  // Example:
-  // "Print to console": {
-  // 	"prefix": "log",
-  // 	"body": [
-  // 		"console.log('$1');",
-  // 		"$2"
-  // 	],
-  // 	"description": "Log output to console"
-  // }
   "pre+dump": {
     "prefix": "dump",
     "body": ["echo '<pre>';", "var_dump(${1:});", "echo '</pre>';"],
@@ -66,15 +53,13 @@
   },
   "flagValid": {
     "prefix": "ift",
-    "body": ["if ($$isValidated === true) {",
-      "\t${1:}",
-      "}"
-    ],
+    "body": ["if ($$isValidated === true) {", "\t${1:}", "}"],
     "description": "フラグの判定"
   },
   "nullValid": {
     "prefix": "ifv",
-    "body": ["if ($${1:} === '' || mb_ereg_match('/^(\\s|　)+$/', $${1:})) {",
+    "body": [
+      "if ($${1:} === '' || mb_ereg_match('/^(\\s|　)+$/', $${1:})) {",
       "\t$${1:}Error = '${2:}';",
       "\t$$isValidated = false;",
       "}"
@@ -109,14 +94,14 @@
   "logout": {
     "prefix": "lo",
     "body": [
-        "session_start();",
-        "",
-        "$$_SESSION = array();",
-        "$$params = session_get_cookie_params();",
-        "setcookie(session_name(), '', time() - 36000,",
-        "\t$$params['path'], $$params['domain'],",
-        "\t$$params['secure'], $$params['httponly']);",
-        "session_destroy();${1:}"
+      "session_start();",
+      "",
+      "$$_SESSION = array();",
+      "$$params = session_get_cookie_params();",
+      "setcookie(session_name(), '', time() - 36000,",
+      "\t$$params['path'], $$params['domain'],",
+      "\t$$params['secure'], $$params['httponly']);",
+      "session_destroy();${1:}"
     ],
     "description": "ログアウト時のセッション破棄"
   },
@@ -149,11 +134,7 @@
   },
   "foreach": {
     "prefix": "@for",
-    "body": [
-      "@foreach (${1:$arr} as ${2:$val})",
-      "\t${3:}",
-      "@endforeach"
-    ],
+    "body": ["@foreach (${1:$arr} as ${2:$val})", "\t${3:}", "@endforeach"],
     "description": "Laravelbladeの繰り返しディレクティブ"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "charset": {
+    "prefix": "@c",
+    "body": "@charset \"UTF-8\";",
+    "description": "文字コード"
+  }
+}
