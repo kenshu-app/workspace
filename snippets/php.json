@@ -59,7 +59,7 @@
   "nullValid": {
     "prefix": "ifv",
     "body": [
-      "if ($${1:} === '' || mb_ereg_match('/^(\\s|　)+$/', $${1:})) {",
+      "if ($${1:} === '' || preg_match('/^(\\s|　)+$/u', $${1:})) {",
       "\t$${1:}Error = '${2:}';",
       "\t$$isValidated = false;",
       "}"
