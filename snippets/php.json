@@ -66,6 +66,11 @@
     ],
     "description": "空値の判定"
   },
+  "pos": {
+    "prefix": "pos",
+    "body": "$$_POST['${1:}'];",
+    "description": "POSTの参照"
+  },
   "post": {
     "prefix": "post",
     "body": "$${1:■} = $$_POST['${2:■}'];",
@@ -88,7 +93,7 @@
   },
   "require_once": {
     "prefix": "ro",
-    "body": "require_once dirname(__FILE__) . '/${1:}.php';",
+    "body": "require_once(dirname(__FILE__) . '/${1:}.php');",
     "description": "外部ファイル読み込み"
   },
   "logout": {
