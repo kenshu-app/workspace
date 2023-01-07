@@ -10,13 +10,13 @@ VSCodeの初期状態だと、効率的な環境には程遠いため、まと�
 |<span class="p20 red">**④**</span>|**拡張機能**|**拡張機能**を一括インストール|設定ファイルを移動後<br>一括インストール|
 |<span class="p20 red">**⑤**</span>|**スニペット**|**汎用的な呼び出しコード**の設置|コマンドで移動|
 
-![](https://i.imgur.com/SCqfXqP.jpg)
+![](https://i.imgur.com/rk0OQxi.jpg)
 
 <br>
 
-事前に設定に必要なファイルをダウンロードし、フォルダ階層、ファイルも開いておく。まずは、[GitHub](https://github.com/kenshu-app/workspace)にアクセスし、右上の「**Code**」ボタンから「**Download ZIP**」を選択し、関連ファイルをダウンロードする。またMacは自動解凍されるが、WindowsはZipデータを解凍し**Downloads内**に解凍フォルダを配置しておく。
+事前に設定に必要なファイルをダウンロードし、フォルダ階層、ファイルも開いておく。まずは、[GitHub](https://github.com/kenshu-app/workspace)にアクセスし、右上の「**Code**」ボタンから「**Download ZIP**」を選択し、関連ファイルをダウンロードする。またMacは自動解凍されるためそのままで良いが、WindowsはZipデータを解凍し<span class="red">**Downloads内直下**</span>に解凍した「**workspace**」フォルダを配置しておく。
 
-![](https://i.imgur.com/dABco4A.jpg)
+![](https://i.imgur.com/QPYyUzg.jpg)
 
 まずはVSCodeに表示を切り替えコンソール(黒い画面)を開き、==事前にできることをコマンドから実行==していく。「**Ctrl + J**」で下部パネルを開き「**ターミナル**」タブを選択する。
 
@@ -33,21 +33,21 @@ $ start /c/xampp/htdocs/
 # デスクトップのpracticeをhtdocsに移動
 $ mv -p ~/Desktop/practice /c/xampp/htdocs/
 # 各設定ファイルやフォルダを移動
-$ mv ~/Downloads/settings/win_keybindings.json ~/AppData/Roaming/Code/User/keybindings.json
-$ mv ~/Downloads/settings/win_settings.jsonc ~/AppData/Roaming/Code/User/settings.json
-$ mv -p ~/Downloads/settings/snippets ~/AppData/Roaming/Code/User/
+$ mv ~/Downloads/workspace/win_keybindings.json ~/AppData/Roaming/Code/User/keybindings.json
+$ mv ~/Downloads/workspace/win_settings.jsonc ~/AppData/Roaming/Code/User/settings.json
+$ mv -p ~/Downloads/workspace/snippets ~/AppData/Roaming/Code/User/
 # 拡張機能ファイルを設定
 $ mkdir /c/xampp/htdocs/.vscode
-$ mv ~/Downloads/settings/extensions.json /c/xampp/htdocs/.vscode
+$ mv ~/Downloads/workspace/extensions.json /c/xampp/htdocs/.vscode
 
 # Mac
 $ open /Applications/MAMP/htdocs/
 $ mv -p ~/Desktop/practice /Applications/MAMP/htdocs/
-$ mv ~/Downloads/settings/mac_keybindings.json ~/Library/Application\ Support/Code/User/
-$ mv ~/Downloads/settings/mac_settings.jsonc ~/Library/Application\ Support/Code/User/settings.json
-$ mv -p ~/Downloads/settings/snippets ~/Library/Application\ Support/Code/User/
+$ mv ~/Downloads/workspace/mac_keybindings.json ~/Library/Application\ Support/Code/User/
+$ mv ~/Downloads/workspace/mac_settings.jsonc ~/Library/Application\ Support/Code/User/settings.json
+$ mv -p ~/Downloads/workspace/snippets ~/Library/Application\ Support/Code/User/
 $ mkdir /Applications/MAMP/htdocs/.vscode
-$ mv ~/Downloads/settings/extensions.json /Applications/MAMP/htdocs/.vscode
+$ mv ~/Downloads/workspace/extensions.json /Applications/MAMP/htdocs/.vscode
 ```
 </div>
 
