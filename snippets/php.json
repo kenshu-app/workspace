@@ -41,6 +41,11 @@
     "body": ["echo '<pre>';", "print_r(${1:});", "echo '</pre>';"],
     "description": "シンプルデバッグ出力"
   },
+  "global": {
+    "prefix": "gl",
+    "body": ["echo '<pre>';", "print_r($$GLOBALS);", "echo '</pre>';"],
+    "description": "グローバル変数でデバッグ出力"
+  },
   "flagTrue": {
     "prefix": "ist",
     "body": ["$$isValidated = true;"],

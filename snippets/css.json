@@ -95,7 +95,10 @@
   },
   "mediaquery": {
     "prefix": "@m",
-    "body": ["@media screen and (${1:max}-width: ${2:768px}) {", "}"],
+    "body": [
+      "@media screen and (${1:max}-width: ${2:768px}) {",
+    "}"
+    ],
     "description": "メディアクエリ"
   },
   "mediaquery100%": {
