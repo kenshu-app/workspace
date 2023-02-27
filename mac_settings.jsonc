@@ -47,9 +47,9 @@
   "editor.multiCursorModifier": "ctrlCmd", // マウスでの複数選択時の修飾キーを変更
   "editor.quickSuggestions": {
     // 補完候補の自動決定
-    "other": false, // コメント内で無効
-    "comments": false, // 文字列内で無効
-    "strings": false // その他の場所で無効
+    "other": true, // コメント内で無効
+    "comments": true, // 文字列内で無効
+    "strings": true // その他の場所で無効
   },
   "editor.quickSuggestionsDelay": 100, // コード補完の表示までのミリ秒
   "editor.renderControlCharacters": true, // 制御文字を表示
