@@ -233,10 +233,11 @@
     // tailwindCSSに含める他言語
     "plaintext": "javascript"
   },
-  "terminal.integrated.fontFamily": "Consolas, monospace",
+  "terminal.integrated.fontFamily": "monospace, Consolas",
   "terminal.integrated.fontSize": 18, // ターミナルフォントサイズ
   "terminal.integrated.copyOnSelection": false, // 範囲選択で囲むとコピー
   "terminal.integrated.enableMultiLinePasteWarning": false, // ターミナル複数行ペースト警告表示
+  "terminal.integrated.letterSpacing": 0, // ターミナルの字間
   "terminal.explorerKind": "external", // ターミナルに外部ツールも統合
   "typescript.check.npmIsInstalled": false, // TSのnpmパッケージバージョンチェック
   "trailing-spaces.trimOnSave": false, // 行末の空文字を保存時に削除
