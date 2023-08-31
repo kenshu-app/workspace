@@ -3,5 +3,15 @@
     "prefix": "@c",
     "body": "@charset \"UTF-8\";",
     "description": "文字コード"
+  },
+  "mixin": {
+    "prefix": "mix",
+    "body": ["@mixin ${1:}() {", "\t${2:}", "}"],
+    "description": "ミックイン定義"
+  },
+  "include": {
+    "prefix": "inc",
+    "body": "@include ${1:}();",
+    "description": "インクルード"
   }
 }

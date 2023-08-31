@@ -99,7 +99,8 @@
   "files.associations": {
     // ファイルの拡張子を特定の言語に関連付け
     ".*lintrc": "json",
-    "*.blade.php": "html"
+    "*.blade.php": "html",
+    "*.css": "tailwindcss"
   }, // ファイルを自動保存
   "files.autoSave": "afterDelay", // 自動遅延保存
   "files.watcherExclude": {

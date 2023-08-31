@@ -11,7 +11,7 @@
   },
   "con": {
     "prefix": "con",
-    "body": "console.log(${1:''})${2:}",
+    "body": "console.log(${1:})",
     "description": "デバッグ出力"
   },
   "ready": {
@@ -29,9 +29,24 @@
     "body": ["$('${1:}').click(function(){", "\t$('${2:}').${3:}", "})"],
     "description": "jQueryClickEvent"
   },
+  "getElementById": {
+    "prefix": "getid",
+    "body": "document.getElementById(${1:})",
+    "description": "idDOM取得"
+  },
+  "querySelector": {
+    "prefix": "qs",
+    "body": "document.querySelector(${1:})",
+    "description": "クエリセレクタ"
+  },
   "function": {
     "prefix": "fn",
     "body": "function(){\n${1:}\n}",
     "description": "関数定義"
+  },
+  "arrowfunction": {
+    "prefix": "(",
+    "body": "() =>",
+    "description": "アロー関数定義"
   }
 }
