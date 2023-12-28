@@ -49,5 +49,15 @@
     "prefix": "de",
     "body": "DELETE FROM ${1:table} WHERE ${4:};",
     "description": "データの削除"
+  },
+  "grant": {
+    "prefix": "gr",
+    "body": [
+      "GRANT SELECT, INSERT, UPDATE, DELETE",
+      "ON ${1:dbName}.*",
+      "TO ${2:sysuser}@localhost",
+      "IDENTIFIED BY '${3:secret}';"
+    ],
+    "description": "ユーザーの作成"
   }
 }
