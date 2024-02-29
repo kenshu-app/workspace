@@ -1,6 +1,6 @@
 {
   //*********** Mac個別設定 ************//
-  "php.validate.executablePath": "/Applications/MAMP/bin/php/php8.0.0/bin/php", // PHPプログラムの読み込む階層：バージョンは個別変更
+  "php.validate.executablePath": "/Applications/MAMP/bin/php/php8.2.0/bin/php", // PHPプログラムの読み込む階層：バージョンは個別変更
   //***********************//
   "blade.format.enable": true, // Laravelテンプレートのフォーマット有効化
   "[blade]": {

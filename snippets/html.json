@@ -25,7 +25,7 @@
   },
   "vp": {
     "prefix": "vp",
-    "body": "<meta name=\"viewport\" content=\"width=${1:device-width}${2: , initial-scale=1.0}\">",
+    "body": "<meta name=\"viewport\" content=\"width=${1:device-width}${2:, initial-scale=1.0}\">",
     "description": "ビューポート"
   },
   "description": {
