@@ -148,7 +148,7 @@
   },
   "vue": {
     "prefix": "vue",
-    "body": "<script src=\"https://unpkg.com/vue@next\"></script>",
+    "body": "<script src=\"https://unpkg.com/vue@3/dist/vue.global.js\"></script>",
     "description": "vue new version"
   }
 }

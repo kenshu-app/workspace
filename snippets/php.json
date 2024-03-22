@@ -131,7 +131,18 @@
       "\texit($$e->getMessage());",
       "}"
     ],
-    "description": "例外処理"
+    "description": "例外処理：エラー表示"
+  },
+  "PDOExceptionLog": {
+    "prefix": "trylog",
+    "body": [
+      "try {",
+      "\t${1:}",
+      "} catch (PDOException $$e) {",
+      "\terror_log($e->getMessage(), 3, __DIR__ .\"/exceptions.log\");",
+      "}"
+    ],
+    "description": "例外処理：ログ出力"
   },
   "DateTimeFormat": {
     "prefix": "dtf",
