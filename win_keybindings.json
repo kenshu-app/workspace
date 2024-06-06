@@ -29,7 +29,7 @@
     "command": "-jumpToPrevSnippetPlaceholder",
     "when": "editorTextFocus && hasPrevTabstop && inSnippetMode"
   },
-{
+  {
     "key": "ctrl+shift+enter",
     "command": "workbench.action.terminal.focus"
   },
@@ -47,60 +47,36 @@
     "key": "tab",
     "command": "-acceptSelectedSuggestion",
     "when": "suggestWidgetVisible && textInputFocus"
-},
-{
+  },
+  {
     "key": "ctrl+shift+alt+n",
     "command": "explorer.newFile"
-},
-{
+  },
+  {
     "key": "ctrl+shift+alt+enter",
     "command": "editor.emmet.action.wrapWithAbbreviation"
-},
-{
+  },
+  {
     "key": "ctrl+t",
     "command": "workbench.action.terminal.splitInActiveWorkspace"
-},
-{
+  },
+  {
     "key": "ctrl+k r",
     "command": "workbench.action.splitEditorRight"
-},
-{
+  },
+  {
     "key": "ctrl+w",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus && terminalProcessSupported"
-},
-{
+  },
+  {
     "key": "ctrl+up",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "terminalFocus && terminalProcessSupported"
-},
-{
-  "key": "ctrl+alt+n",
-  "command": "-namespaceResolver.highlightNotImported",
-  "when": "editorTextFocus"
-},
-{
-  "key": "shift+alt+/",
-  "command": "editor.action.peekImplementation",
-  "when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
-},
-{
-  "key": "shift+cmd+f12",
-  "command": "-editor.action.peekImplementation",
-  "when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
-},
-{
-  "key": "alt+/",
-  "command": "editor.action.peekDefinition",
-  "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
-},
-{
-  "key": "alt+f12",
-  "command": "-editor.action.peekDefinition",
-  "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
-},
-{
-  "key": "shift+alt+/",
-  "command": "editor.action.peekDeclaration"
-}
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "-namespaceResolver.highlightNotImported",
+    "when": "editorTextFocus"
+  }
 ]
